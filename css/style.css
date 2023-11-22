@@ -1,0 +1,142 @@
+@keyframes slideIn {
+  0% {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-s {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-e {
+  0% {
+    transform: translateX(2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-el {
+  0% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-b {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-t {
+  0% {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes grid {
+  0% {
+    opacity: 0;
+    max-height: 100vw;
+  }
+
+  100% {
+    opacity: 1;
+    max-height: 100%;
+  }
+}
+
+.slideIn {
+  animation-name: slideIn;
+}
+
+.fade-s,
+.fade-e,
+.fade-b,
+.fade {
+  opacity: 0;
+}
+
+.fade-s-in,
+.fade-e-in,
+.fade-b-in,
+.fade-in {
+  opacity: 1;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fade-s-in {
+  animation-name: slide-s;
+}
+
+.fade-e-in {
+  animation-name: slide-e;
+}
+
+.fade-b-in {
+  animation-name: slide-b;
+}
+
+.fade-in {
+  animation-name: slide;
+}
+
+.padding-button-2 {
+  padding: 0.88rem 1.5rem;
+}
+
+.padding-button-1 {
+  padding: 0.66rem 1.5rem;
+}
