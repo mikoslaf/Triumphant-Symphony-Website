@@ -20,4 +20,10 @@ $(function () {
   ];
   targets.forEach(lazyload);
 
+  $("#confirm_form").click(function (e) { 
+    e.preventDefault();
+    
+    console.log("test");
+  });
 });
+

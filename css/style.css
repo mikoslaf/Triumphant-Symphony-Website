@@ -159,6 +159,10 @@
   width: 3.5%;
 }
 
+.none {
+  display: none;
+}
+
 @media (max-width: 1400px) {
   .bg-img {
     display: block;
