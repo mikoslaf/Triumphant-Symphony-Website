@@ -1,18 +1,7 @@
-@keyframes slideIn {
-  0% {
-    transform: translateY(-2rem);
-    opacity: 0;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-  100% {
-    transform: translateY(0rem);
-    opacity: 1;
-  }
-
-  0% {
-    transform: translateY(-2rem);
-    opacity: 0;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 @keyframes slide-s {
@@ -36,18 +25,6 @@
   100% {
     transform: translateX(0rem);
     opacity: 1;
-  }
-}
-
-@keyframes slide-el {
-  0% {
-    transform: translateX(0rem);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateX(-2rem);
-    opacity: 0;
   }
 }
 
@@ -97,10 +74,6 @@
   }
 }
 
-.slideIn {
-  animation-name: slideIn;
-}
-
 .fade-s,
 .fade-e,
 .fade-b,
@@ -131,14 +104,6 @@
 
 .fade-in {
   animation-name: slide;
-}
-
-.padding-button-2 {
-  padding: 0.88rem 1.5rem;
-}
-
-.padding-button-1 {
-  padding: 0.66rem 1.5rem;
 }
 
 .box {

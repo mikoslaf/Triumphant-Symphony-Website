@@ -35,4 +35,14 @@ $(function () {
       $("#invalidCheck3").addClass("is-invalid");
     else $("#invalidCheck3").removeClass("is-invalid");
   });
+
+  $(".to-form").click(function (e) { 
+    e.preventDefault();
+    window.location.href = 'form.html';
+  });
+
+  $("#button_from").click(function (e) { 
+    e.preventDefault();
+    window.location.href = '#validationServer01';
+  });
 });
