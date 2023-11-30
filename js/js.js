@@ -20,10 +20,19 @@ $(function () {
   ];
   targets.forEach(lazyload);
 
-  $("#confirm_form").click(function (e) { 
-    e.preventDefault();
-    
-    console.log("test");
+  $("#confirm_form").click(function (e) {
+    for (let i = 1; i < 4; i++) {
+      if ($("#validationServer0" + i).val().length == 0)
+        $("#validationServer0" + i).addClass("is-invalid");
+      else $("#validationServer0" + i).removeClass("is-invalid");
+    }
+
+    if ($("#validationServer04").val() == null)
+      $("#validationServer04").addClass("is-invalid");
+    else $("#validationServer04").removeClass("is-invalid");
+
+    if(!$("#invalidCheck3").is(":checked"))
+      $("#invalidCheck3").addClass("is-invalid");
+    else $("#invalidCheck3").removeClass("is-invalid");
   });
 });
-
