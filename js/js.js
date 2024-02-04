@@ -12,6 +12,14 @@ const lazyload = (target) => {
 };
 
 $(function () {
+
+  const today = new Date();
+  const dd = String(today.getDate()).padStart(2, '0');
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const yyyy = today.getFullYear();
+  
+  $('.navbar-text').html("Seize Every Day. " + dd + '/' + mm + '/' + yyyy);
+
   const targets = [
     ...document.querySelectorAll(".fade-s"),
     ...document.querySelectorAll(".fade-e"),
@@ -21,6 +29,8 @@ $(function () {
   targets.forEach(lazyload);
 
   $("#confirm_form").click(function (e) {
+    e.preventDefault();
+
     for (let i = 1; i < 4; i++) {
       if ($("#validationServer0" + i).val().length == 0)
         $("#validationServer0" + i).addClass("is-invalid");
