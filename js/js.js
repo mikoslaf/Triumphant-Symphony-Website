@@ -55,4 +55,11 @@ $(function () {
     e.preventDefault();
     window.location.href = '#validationServer01';
   });
+
+  $('#button-addon').click(function (e) {
+    e.preventDefault();
+    const value = $(".form-control").val();
+    if(value.length > 0)
+      $('#addon').append("<li>" + value + "</li>");
+  });
 });
