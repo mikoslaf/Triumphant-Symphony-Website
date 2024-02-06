@@ -1,3 +1,54 @@
+const Countries = [
+  "Albania",
+  "Andorra",
+  "Austria",
+  "Belarus",
+  "Belgium",
+  "Bosnia and Herzegovina",
+  "Bulgaria",
+  "Croatia",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Estonia",
+  "Finland",
+  "France",
+  "Germany",
+  "Greece",
+  "Hungary",
+  "Iceland",
+  "Ireland",
+  "Italy",
+  "Kosovo",
+  "Latvia",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Malta",
+  "Moldova",
+  "Monaco",
+  "Montenegro",
+  "Netherlands",
+  "North Macedonia",
+  "Norway",
+  "Poland",
+  "Portugal",
+  "Romania",
+  "Russia",
+  "San Marino",
+  "Serbia",
+  "Slovakia",
+  "Slovenia",
+  "Spain",
+  "Sweden",
+  "Switzerland",
+  "Turkey",
+  "Ukraine",
+  "United Kingdom",
+  "Vatican City",
+  "Other",
+];
+
 const lazyload = (target) => {
   const io = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
@@ -61,5 +112,12 @@ $(function () {
     const value = $(".form-control").val();
     if(value.length > 0)
       $('#addon').append("<li>" + value + "</li>");
+  });
+
+  Countries.forEach((e) => {
+    $('#validationServer04').append($('<option>', {
+      value: e,
+      text: e
+  }));
   });
 });
