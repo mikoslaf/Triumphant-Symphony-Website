@@ -82,7 +82,7 @@ $(function () {
   $("#confirm_form").click(function (e) {
     e.preventDefault();
 
-    for (let i = 1; i < 4; i++) {
+    for (let i = 1; i < 6; i++) {
       if ($("#validationServer0" + i).val().length == 0)
         $("#validationServer0" + i).addClass("is-invalid");
       else $("#validationServer0" + i).removeClass("is-invalid");
