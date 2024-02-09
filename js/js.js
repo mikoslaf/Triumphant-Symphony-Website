@@ -82,10 +82,13 @@ $(function () {
   $("#confirm_form").click(function (e) {
     e.preventDefault();
 
-    for (let i = 1; i < 6; i++) {
-      if ($("#validationServer0" + i).val().length == 0)
-        $("#validationServer0" + i).addClass("is-invalid");
-      else $("#validationServer0" + i).removeClass("is-invalid");
+    //console.log($('#validationServer04').val().length);
+    
+    for (let i = 1; i < 7; i++) {
+      if(i != 4)
+        if ($("#validationServer0" + i).val().length == 0)
+          $("#validationServer0" + i).addClass("is-invalid");
+        else $("#validationServer0" + i).removeClass("is-invalid");
     }
 
     if ($("#validationServer04").val() == null)
@@ -95,6 +98,9 @@ $(function () {
     if(!$("#invalidCheck3").is(":checked"))
       $("#invalidCheck3").addClass("is-invalid");
     else $("#invalidCheck3").removeClass("is-invalid");
+
+    console.log($('#validationServer06').val());
+
   });
 
   $(".to-form").click(function (e) { 
