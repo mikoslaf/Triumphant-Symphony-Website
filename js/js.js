@@ -62,6 +62,28 @@ const lazyload = (target) => {
   io.observe(target);
 };
 
+function chech_date() {
+  const first_date = $('#validationServer05').val().split('-');
+  const second_date = $('#validationServer06').val().split('-');
+
+  if(first_date.length == 1 || second_date.length == 1){
+    $('#validationServer05').addClass("is-invalid");
+    $('#validationServer06').addClass("is-invalid");
+    return;
+  }
+
+  for (let i = 0; i < first_date.length; i++) {
+    if(first_date[i] > second_date[i]){
+      $('#validationServer05').addClass("is-invalid");
+      $('#validationServer06').addClass("is-invalid");
+      return;
+    }
+  }
+
+  $('#validationServer05').removeClass("is-invalid");
+  $('#validationServer06').removeClass("is-invalid");
+}
+
 $(function () {
 
   const today = new Date();
@@ -99,8 +121,7 @@ $(function () {
       $("#invalidCheck3").addClass("is-invalid");
     else $("#invalidCheck3").removeClass("is-invalid");
 
-    console.log($('#validationServer06').val());
-
+    chech_date();
   });
 
   $(".to-form").click(function (e) { 
