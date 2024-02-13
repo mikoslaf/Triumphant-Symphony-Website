@@ -106,9 +106,10 @@ $(function () {
 
     //console.log($('#validationServer04').val().length);
     
-    for (let i = 1; i < 7; i++) {
+    for (let i = 1; i < 9; i++) {
+      const is_vaild = document.getElementById("validationServer0" + i).checkValidity();
       if(i != 4)
-        if ($("#validationServer0" + i).val().length == 0)
+        if ($("#validationServer0" + i).val().length == 0 || !is_vaild)
           $("#validationServer0" + i).addClass("is-invalid");
         else $("#validationServer0" + i).removeClass("is-invalid");
     }
